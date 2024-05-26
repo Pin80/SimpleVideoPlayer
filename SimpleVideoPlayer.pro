@@ -1,5 +1,5 @@
 TEMPLATE = app
-CONFIG += console c++11
+CONFIG += console c++17
 CONFIG -= app_bundle
 CONFIG -= qt
 
@@ -45,7 +45,7 @@ unix {
     INCLUDEPATH+=/opt/glfw/glfw-3.3.8/include
 # Included libraries
 # C library requires  headers in "extern "C" block for valid linking
-	LIBS += /home/user/MyBuild/build_test_ffmpeg6/ffmpeg.a
+        LIBS += /opt/unitedffmpeg/ffmpeg.a
 # General purpose
     LIBS+=/opt/zlib/zlib-1.2.13/libz.a
     LIBS+=-ldl
@@ -79,13 +79,15 @@ SOURCES += \
 
 DISTFILES += \
     Makefile.ffmpeg \
+    README.md \
     create_link_to_res_in_build_dir.sh \
     known_issues.txt \
+    make_static.sh \
     pantry.txt \
     settings/settings.json
 
 # Build libraw
-!exists( $$/home/user/MyBuild/build_test_ffmpeg6/ffmpeg.a )
+!exists( ffmpeg.a )
 {
 	system( make -f Makefile.ffmpeg )
 }

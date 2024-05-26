@@ -1,6 +1,6 @@
 LTOOL:=ar
 FFMPEGPATH:=/opt/ffmpeg/v51_release/FFmpeg/build/lib
-TARGETPATH:=/home/user/MyBuild/build_test_ffmpeg6
+TARGETPATH:=/opt/unitedffmpeg
 LFLAGS1:=--start-group
 LFLAGS2:=-Wl,--end-group
 ARCHIVES:=$(FFMPEGPATH)/libavcodec.a \
