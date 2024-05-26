@@ -1,0 +1,5 @@
+Application don't work properly "restart video" on mkv container
+Application don't playback video without video stream
+Application might not work on non-h264 video codec
+Application might not work on non-interleaved audio data
+I know nothing about snd_pcm_sw_params_set_period_event

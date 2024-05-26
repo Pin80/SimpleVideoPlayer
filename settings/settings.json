@@ -1,0 +1,11 @@
+{
+	"application":	{
+                        "sound_max_latancy":  300000,
+                        "sound_min_soundtime_period": 1000,
+                        "sound_max_soundtime_period": 1000000,
+                        "sound_good_buffers_time": 100000,
+                        "video_formats": [ "mp4", "mkv", "avi" ],
+                        "video_codecs": [ "H.264", "MJPEG" ],
+                        "audio_sample_fmt": [ "AV_SAMPLE_FMT_FLT" ]
+	}
+}

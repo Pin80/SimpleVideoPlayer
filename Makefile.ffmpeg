@@ -1,0 +1,16 @@
+LTOOL:=ar
+FFMPEGPATH:=/opt/ffmpeg/v51_release/FFmpeg/build/lib
+TARGETPATH:=/home/user/MyBuild/build_test_ffmpeg6
+LFLAGS1:=--start-group
+LFLAGS2:=-Wl,--end-group
+ARCHIVES:=$(FFMPEGPATH)/libavcodec.a \
+$(FFMPEGPATH)/libavdevice.a \
+			$(FFMPEGPATH)/libavfilter.a \
+			$(FFMPEGPATH)/libavformat.a \
+			$(FFMPEGPATH)/libavutil.a \
+			$(FFMPEGPATH)/libswresample.a \
+			$(FFMPEGPATH)/libswscale.a
+
+
+all:$(ARCHIVES)
+	$(LTOOL)  -rcT $(TARGETPATH)/ffmpeg.a  $(ARCHIVES)
